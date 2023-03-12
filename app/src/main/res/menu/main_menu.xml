@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home"
+            />
+
+        <item android:id="@+id/contact"
+            android:icon="@drawable/round_message_24"
+            android:title="Contact"
+            />
+
+        <item android:id="@+id/record"
+            android:icon="@drawable/baseline_folder_shared_24"
+            android:title="Records"
+        />
+
+        <item android:id="@+id/insurance"
+        android:icon="@drawable/baseline_attach_money_24"
+        android:title="Insurance"
+        />
+    </group>
+
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                 <item android:id="@+id/profile"
+                    android:icon="@drawable/baseline_account_circle_24"
+                    android:title="Profile"
+                    />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Communication">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/share"
+                    android:icon="@drawable/baseline_share_24"
+                    android:title="Share"
+                    />
+
+                <item android:id="@+id/rate_us"
+                    android:icon="@drawable/baseline_sentiment_satisfied_alt_24"
+                    android:title="Rate Us"
+                    />
+            </group>
+        </menu>
+    </item>
+
+</menu>

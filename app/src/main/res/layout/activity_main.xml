@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:headerLayout="@layout/header"-->
+<!--        app:menu="@menu/main_menu"-->
+<!--        android:id="@+id/nav_view"-->
+<!--        android:layout_gravity="start"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginBottom="40dp"
+            android:id="@+id/sgnup"
+            />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/sgnin"
+            />
+
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <com.denzcoskun.imageslider.ImageSlider-->
+<!--        android:id="@+id/image_slider"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="200dp"-->
+<!--        app:iss_auto_cycle="true"-->
+<!--        app:iss_period="1000"-->
+<!--        app:iss_delay="0"/>-->
+
+<!--    <View-->
+<!--        android:layout_width="109dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/grey_font"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginLeft="20dp"/>-->
+
+<!--    <View-->
+<!--        android:layout_width="109dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/grey_font"-->
+<!--        android:layout_marginTop="-2dp"-->
+<!--        android:layout_marginLeft="275dp"/>-->
+
+<!--    <View-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        android:layout_marginTop="170dp"-->
+<!--        android:background="@color/grey_font" />-->
+
+<!--    <TextView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="vertical"-->
+<!--    android:text="@string/the_advantages_of_getting_your_car_financed_through_suzuki_finance_arrangement_program_are_1_fast_and_hassle_free_processing_2_equity_as_per_your_affordability_3_comprehensive_insurance_at_lowest_rates_4_priority_deliveries_5_peace_of_mind_with_free_3rd_year_extended_warranty_6_best_competitive_and_affordable_rate_7_transparent_deals"-->
+<!--    android:textSize="20dp"-->
+<!--    android:paddingTop="220dp"-->
+<!--    />-->
+
+<!--</LinearLayout>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ABOUT US"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="25dp"-->
+<!--        android:paddingTop="235dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:paddingTop="300dp"-->
+<!--        android:text="What is Motor Finance Arrangement Program?"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="30dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView5"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="20dp"-->
+<!--        android:paddingTop="450dp"-->
+<!--        android:text="Motor Finance Arrangement Program is the most convenient and hassle free way of getting your car financed. Now you can sit back and relax at your home or office and apply online! Motors Finance arrangement program is a one of its kind innovative financing solution having multiple value added benefits."-->
+<!--        />-->
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
