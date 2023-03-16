@@ -24,7 +24,7 @@ public class Dashboard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.dash);
 
         // Initialize and execute the AsyncTask to fetch data from the PHP API
         new GetDataTask().execute();
@@ -37,7 +37,7 @@ public class Dashboard extends AppCompatActivity {
             String result = "";
             HttpURLConnection urlConnection = null;
             try {
-                URL url = new URL("http://192.168.68.109/MVFP/dashboard.php");
+                URL url = new URL("http://192.168.10.74/MVFP/dashboard.php");
                 urlConnection = (HttpURLConnection) url.openConnection();
 
                 InputStream in = urlConnection.getInputStream();
