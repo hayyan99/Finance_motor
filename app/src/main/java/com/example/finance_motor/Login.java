@@ -47,15 +47,15 @@ public class Login extends AppCompatActivity {
         StringRequest REQ = new StringRequest(Request.Method.POST, LOGINAPI, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if (response.equals("User Customer")) {
+                if (response.equals("UserCustomer")) {
                     Intent mydash = new Intent(getApplicationContext(), Dashboard.class);
                     startActivity(mydash);
                 }
-                else if (response.equals("User Admin")) {
+                else if (response.equals("UserAdmin")) {
                     Intent admindash = new Intent(getApplicationContext(), Adminpanel.class);
                     startActivity(admindash);
                 }
-                else if (response.equals("User Dealer")) {
+                else if (response.equals("UserDealer")) {
                     Intent dealerdash = new Intent(getApplicationContext(), dealerspanel.class);
                     startActivity(dealerdash);
                 }
