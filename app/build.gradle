@@ -40,4 +40,12 @@ dependencies {
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'com.google.android.instantapps.thirdpartycompat:volleycompat:1.0.0'
     implementation 'com.android.volley:volley-cronet:1.2.1'
+
+    implementation 'com.google.code.gson:gson:2.8.8'
+
+//  FOR CUSTOMER LIST ACTIVITY_DEALERSPANEL
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
 }
