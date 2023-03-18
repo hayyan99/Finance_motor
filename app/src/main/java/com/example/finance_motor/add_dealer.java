@@ -24,7 +24,7 @@ public class add_dealer extends AppCompatActivity {
 
     private Button dealer_regis;
     private EditText dealer_name, dealer_EmailAddress, dealer_Password, dealer_phone;
-    final String DAPI = "http://192.168.10.74/MVFP/add_dealer.php";
+    final String DAPI = "http://192.168.149.111/MVFP/add_dealer.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

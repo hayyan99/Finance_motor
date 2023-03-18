@@ -33,7 +33,7 @@ public class dealerspanel extends AppCompatActivity {
     ActionBarDrawerToggle drawerToggle;
 
     // new add start
-    private static final String API_URL = "http://192.168.10.74/MVFP/customers.php";
+    private static final String API_URL = "http://192.168.149.111/MVFP/customers.php";
     private TableLayout tableLayout;
     // new add end
 

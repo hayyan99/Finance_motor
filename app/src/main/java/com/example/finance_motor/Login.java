@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
 
     private Button LOGIN;
     private EditText email, pass;
-    final String LOGINAPI = "http://192.168.10.74/MVFP/login.php";
+    final String LOGINAPI = "http://192.168.149.111/MVFP/login.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

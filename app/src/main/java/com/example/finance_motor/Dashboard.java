@@ -37,7 +37,7 @@ public class Dashboard extends AppCompatActivity {
             String result = "";
             HttpURLConnection urlConnection = null;
             try {
-                URL url = new URL("http://192.168.10.74/MVFP/dashboard.php");
+                URL url = new URL("http://192.168.149.111/MVFP/dashboard.php");
                 urlConnection = (HttpURLConnection) url.openConnection();
 
                 InputStream in = urlConnection.getInputStream();
