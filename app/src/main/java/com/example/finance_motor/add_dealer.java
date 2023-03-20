@@ -1,9 +1,13 @@
 package com.example.finance_motor;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +29,11 @@ public class add_dealer extends AppCompatActivity {
 
     private Button dealer_regis;
     private EditText dealer_name, dealer_EmailAddress, dealer_Password, dealer_phone;
-    final String DAPI = "http://192.168.149.111/MVFP/add_dealer.php";
+    final String DAPI = "http://192.168.68.120/MVFP/add_dealer.php";
+
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ActionBarDrawerToggle drawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +50,46 @@ public class add_dealer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dealer_reg(dealer_name.getText().toString(), dealer_EmailAddress.getText().toString(), dealer_Password.getText().toString(), dealer_phone.getText().toString());
+            }
+        });
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+
+        drawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
+        drawerLayout.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.home:{
+                        Toast.makeText(add_dealer.this,"Home Selected",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    case R.id.users:{
+                        Toast.makeText(add_dealer.this,"All users Selected",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    case R.id.form:{
+                        Toast.makeText(add_dealer.this,"Forms Selected",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    case R.id.car:{
+                        Toast.makeText(add_dealer.this,"Cars Selected",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    case R.id.dealers1:{
+                        Toast.makeText(add_dealer.this,"Add dealers Selected",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    case R.id.profile:{
+                        Toast.makeText(add_dealer.this,"Logout Selected",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                }
+                return false;
             }
         });
     }

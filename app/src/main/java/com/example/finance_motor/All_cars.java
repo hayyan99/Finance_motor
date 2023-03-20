@@ -3,8 +3,10 @@ package com.example.finance_motor;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
+
+import android.os.Bundle;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,18 +32,21 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Iterator;
 
-public class Dashboard extends AppCompatActivity {
+
+
+public class All_cars extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dash);
-
+        setContentView(R.layout.activity_all_cars);
 
         // Initialize and execute the AsyncTask to fetch data from the PHP API
-        new GetDataTask().execute();
+        new All_cars.GetDataTask().execute();
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -53,28 +58,44 @@ public class Dashboard extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.home: {
-                        Toast.makeText(Dashboard.this,"Home Selected",Toast.LENGTH_SHORT).show();
+                switch (item.getItemId()){
+                    case R.id.home:{
+                        Toast.makeText(All_cars.this,"Home Selected",Toast.LENGTH_SHORT).show();
                         break;
                     }
-                    case R.id.record: {
-                        Toast.makeText(Dashboard.this, "Dealers Selected", Toast.LENGTH_SHORT).show();
+                    case R.id.users:{
+                        Toast.makeText(All_cars.this,"All users Selected",Toast.LENGTH_SHORT).show();
                         break;
                     }
-                    case R.id.insurance: {
-                        Toast.makeText(Dashboard.this, "Forms Selected", Toast.LENGTH_SHORT).show();
+                    case R.id.form:{
+                        Toast.makeText(All_cars.this,"Forms Selected",Toast.LENGTH_SHORT).show();
                         break;
                     }
-
-                    case R.id.logout: {
-                        Toast.makeText(Dashboard.this, "Logout Selected", Toast.LENGTH_SHORT).show();
+                    case R.id.car:{
+                        Toast.makeText(All_cars.this,"Cars Selected",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    case R.id.dealers1:{
+                        Toast.makeText(All_cars.this,"Add dealers Selected",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    case R.id.profile:{
+                        Toast.makeText(All_cars.this,"Logout Selected",Toast.LENGTH_SHORT).show();
                         break;
                     }
                 }
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }else {
+            super.onBackPressed();
+        }
     }
 
     private class GetDataTask extends AsyncTask<Void, Void, String> {
@@ -118,7 +139,7 @@ public class Dashboard extends AppCompatActivity {
                 // Create table rows and add data to them
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
-                    TableRow tableRow = new TableRow(Dashboard.this);
+                    TableRow tableRow = new TableRow(All_cars.this);
                     tableRow.setLayoutParams(new TableRow.LayoutParams(
                             ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
@@ -126,7 +147,7 @@ public class Dashboard extends AppCompatActivity {
                     Iterator<String> keys = jsonObject.keys();
                     while (keys.hasNext()) {
                         String key = keys.next();
-                        TextView textView = new TextView(Dashboard.this);
+                        TextView textView = new TextView(All_cars.this);
                         textView.setLayoutParams(new TableRow.LayoutParams(
                                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                         textView.setPadding(16, 16, 16, 16);

@@ -127,7 +127,7 @@ public class Register extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             // API endpoint URL
-            String url = "http://192.168.149.111/MVFP/user_reg.php";
+            String url = "http://192.168.68.120/MVFP/user_reg.php";
 
             // Build POST data
             String name = params[0];

@@ -26,7 +26,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     private Button regis, login;
     private EditText name, editTextTextEmailAddress, editTextTextPassword, phone;
-    final String API = "http://192.168.149.111/MVFP/user_reg.php";
+    final String API = "http://192.168.68.120/MVFP/user_reg.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
 
     private Button LOGIN;
     private EditText email, pass;
-    final String LOGINAPI = "http://192.168.149.111/MVFP/login.php";
+    final String LOGINAPI = "http://192.168.68.120/MVFP/login.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,11 +48,11 @@ public class Login extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if (response.equals("UserCustomer")) {
-                    Intent mydash = new Intent(getApplicationContext(), Dashboard.class);
+                    Intent mydash = new Intent(getApplicationContext(),Dashboard.class);
                     startActivity(mydash);
                 }
                 else if (response.equals("UserAdmin")) {
-                    Intent admindash = new Intent(getApplicationContext(), Adminpanel.class);
+                    Intent admindash = new Intent(getApplicationContext(), add_dealer.class);
                     startActivity(admindash);
                 }
                 else if (response.equals("UserDealer")) {
